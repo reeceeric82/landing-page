@@ -1,0 +1,371 @@
+:root {
+    --color-one: #1F2937;
+    --color-two: #3882f6;
+    --color-three: #e5e7eb;
+    --color-four: #f9faf8;
+    --container-height: 90vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Utility classes */
+
+.hero-main-text {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--color-four)
+}
+
+.hero-2nd-text {
+    font-size: 18px;
+    color: var(--color-three);
+}
+
+.header-logo-text {
+    font-size: 24px;
+    color: var(--color-four)
+}
+
+.info-header-text {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--color-one);
+}
+
+.quote-text {
+    font-size: 36px;
+    font-weight: light;
+    font-style: italic;
+    color: var(--color-one);
+}
+
+.btn {
+    background-color: var(--color-two);
+    color: var(--color-four);
+    border: none;
+    border-radius: 5px;
+    padding:6px 25px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--color-one);
+    color: var(--color-four);
+    height: 70px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    padding-right: 170px;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-link {
+    color: var(--color-four)
+}
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.nav-logo {
+    padding-left: 170px;
+}
+
+.nav-logo a {
+    color: var(--color-four);
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        padding-right: 0;
+        top: 70px;
+        left: 0;
+        background-color: var(--color-one);
+        text-align: center;
+        
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 0;
+        padding: 50px;
+        font: 1.5em;
+    }
+
+    .nav-logo {
+        padding-left: 137px;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}
+
+/* Hero */
+.hero {
+    background-color: var(--color-one);
+    height: calc(10px +var(--container-height));
+    display: flex;
+    justify-content: space-between;
+    padding: 200px;
+}
+
+.hero-heading {
+    padding-bottom: 20px;
+}
+
+.sub-header {
+    padding: 10px 0 30px;
+}
+
+.hero-content {
+    width: 500px;
+}
+
+.hero-two {
+    background-color: darkgray;
+    height: 200px;
+    text-align: center;
+    justify-content: center;
+}
+
+.placeholder-text {
+    text-align: center;
+    padding-top: 90px;
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        display: block;
+        padding: 10vh 0;
+        align-items: center;
+        margin: auto;
+    }
+
+    .hero-heading {
+        margin: auto;
+        text-align: center;
+    }
+
+    .sub-header {
+        margin: auto;
+        text-align: center;
+        padding: 10px 30px 10px;
+    }
+
+    .hero-one {
+        padding: 0;
+        width: 100vw;
+    }
+
+    .signup-btn {
+        margin: auto;
+        text-align: center;
+        padding: 20px 40px;
+    }
+
+    .hero-two {
+        margin: 50px auto;
+    }
+
+    .hero-two {
+        height: 170px;
+        width: 400px;
+    }
+
+    .placeholder-text {
+        text-align: center;
+        padding-top: 80px;
+    }
+}
+
+/* Info */
+.info {
+    height: calc(200px + var(--container-height));
+}
+
+
+.info-content-one {
+    text-align: center;
+    padding: 150px 0 150px;
+}
+
+.info-content-two {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.img-box {
+    width: 180px;
+    height: 180px;
+    border: 3px solid var(--color-two);
+    border-radius: 10px;
+}
+
+.img-info-text {
+    width: 180px;
+    text-align: center;
+    padding: 30px 0 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    .info {
+        height: calc(3 * var(--container-height));
+    }
+    
+    .info-content-two {
+        display: block;
+        padding-left: calc(100vw / 3.5);
+    }
+
+    .info-placeholder {
+        padding: 0 0 30px;
+    }
+}
+
+/* Quote */
+.quote {
+    height: calc(50px + var(--container-height));
+    background-color: var(--color-three);
+}
+
+.quote-container {
+    width: 55vw;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 240px;
+}
+
+.quote-text::before {
+    content: '"'
+}
+
+.quote-text::after {
+    content: '"'
+}
+
+.quote-text {
+    width: 55vw;
+}
+
+.author::before {
+    content: "- ";
+}
+
+.author {
+    float: right;
+    font-weight: 900;
+}
+
+@media screen and (max-width: 768px) {
+    .quote {
+        height: calc(var(--container-height) * 1.2);
+    }
+
+    .quote-container {
+        padding-top: 100px;
+    }
+    
+    .quote-text {
+        width: 70vw;
+    }
+
+    .quote-author {
+        padding-top: 20px;
+    }
+}
+
+/* CTA */
+.call-to-action {
+    height: var(--container-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-box {
+    height: calc( 0.30 * var(--container-height));
+    width: calc(0.75 * 100vw);
+    background-color: var(--color-two);
+    color: var(--color-four);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-text {
+    padding-right: 50px;
+}
+
+.btn-cta {
+    border: 2px solid var(--color-four);
+}
+
+@media screen and (max-width: 768px) {
+    .cta-box {
+        width: 99vw;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cta-text {
+        padding: 20px 0 20px;
+        text-align: center;
+    }
+
+    .cta-button {
+        text-align: center;
+    }
+}
+
+
+/* Footer */
+footer {
+    height: 80px;
+    background-color: var(--color-one);
+    color: var(--color-four);
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-text {
+    padding-top: 30px;
+}
